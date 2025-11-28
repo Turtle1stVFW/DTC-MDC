@@ -1,16 +1,16 @@
-FROM python:3
+FROM python:3.10
 
 COPY mdc_api /data/build/mdc_api
 COPY setup.py requirements.txt /data/build
 
 RUN useradd --create-home --home /mdc_api mdc_api && \
-		chown -R mdc_api:mdc_api /data
+	chown -R mdc_api:mdc_api /data
 
 USER mdc_api
 WORKDIR /data/build
 
-RUN python3 -m pip install --upgrade pip
-RUN python3 setup.py bdist_wheel 
+RUN python3 -m pip install --upgrade pip setuptools wheel
+RUN python3 setup.py bdist_wheel
 RUN python3 -m pip install dist/mdc_api*.whl
 RUN rm -rf /data/build
 

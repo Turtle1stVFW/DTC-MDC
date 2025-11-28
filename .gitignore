@@ -11,3 +11,32 @@ api/*.pyc
 api/*\.egg-info
 data
 /etc
+=======
+# runtime data / volumes
+data/
+data/**
+
+# secrets / local config
+etc/app.conf
+
+# caches and logs
+*.log
+cache/
+cache/**
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Editors / OS cruft
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Node/other (not used, but harmless)
+node_modules/
+dist/
+build/
+app/

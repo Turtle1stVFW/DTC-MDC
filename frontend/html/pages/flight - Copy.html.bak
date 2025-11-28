@@ -114,7 +114,7 @@
       </div>
 
       <!-- Callsign + Auto button -->
-      <div class="col-3">
+      <div class="col">
         <div class="form-group">
           <label for="mission-callsign">Callsign</label>
           <div class="input-group">
@@ -132,7 +132,7 @@
       </div>
 
       <!-- Flight number -->
-      <div class="col-2">
+      <div class="col">
         <div class="form-group">
           <label for="mission-flight-number">Flight Number</label>
           <input type="number" class="form-control" name="mission-flight-number"
@@ -185,6 +185,8 @@
   <em>Auto Callsign</em> to generate IDs and TNs.
 </small>
 <!-- ==================================== -->
+
+<table class="table table-striped mb-0" id="flight-members-table">
 
       <table class="table table-striped mb-0" id="flight-members-table">
         <colgroup>

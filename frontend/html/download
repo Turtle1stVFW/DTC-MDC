@@ -377,7 +377,7 @@ class DCS_DTC():
         return misc
 
 
-    def format_waypoints(self, sequence_start=1):
+    def format_waypoints(self):
         '''
         This wants it in
         {
@@ -405,7 +405,7 @@ class DCS_DTC():
         '''
 
         waypoints = []
-        sequence = sequence_start
+        sequence = 1
         alt = 0
 
         if ('waypoint' not in self._mdc
@@ -675,19 +675,16 @@ class DCS_DTC():
 
         content = {}
 
-        steerpoint_start = 1
-        # If we're an 18, default starting at 0
-        if self._ac == 'FA-18C':
-            steerpoint_start = 0
-
-        waypoints = self.format_waypoints(steerpoint_start)
+        waypoints = self.format_waypoints()
         if waypoints:
             content['Waypoints'] = {
                 'Waypoints': waypoints,
-                'EnableUpload': True,
-                'SteerpointStart': steerpoint_start
+                'EnableUpload': True
             }
 
+            # If we're an 18, default starting at 0
+            if self._ac == 'FA-18C':
+                content['Waypoints']['SteerpointStart'] = 0
 
         cms = self.format_cms()
         if cms:

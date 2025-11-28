@@ -21,9 +21,9 @@ RUN apt-get update \
 			libxdamage1 \
 			libxfixes3 \
 			libxkbcommon0 \
-			libxrandr2 \
-			xcb \
-		&& rm -rf /var/lib/apt/lists/*
+libxrandr2 \
+libxcb1 \
+&& rm -rf /var/lib/apt/lists/*
 
 COPY etc/requirements.txt /tmp/
 

@@ -52,6 +52,11 @@ const PROJ4_THEATRES = {
     'easting': 35427.619999985734,
     'northing': -6061633.128000011
   },
+  'Afghanistan': {
+    'central_meridian': 66,
+    'easting': -22832.028,
+    'northing': -3754932.073,
+  },
 }
 
 

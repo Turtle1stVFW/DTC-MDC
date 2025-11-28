@@ -1,0 +1,42 @@
+﻿{
+  "id": 1,
+  "missions": [
+    {
+      "active": true,
+      "id": 1,
+      "is_default": true,
+      "name": "Caucases"
+    },
+    {
+      "active": true,
+      "id": 6,
+      "is_default": false,
+      "name": "Mariana Islands"
+    },
+    {
+      "active": true,
+      "id": 2,
+      "is_default": false,
+      "name": "Nevada"
+    },
+    {
+      "active": true,
+      "id": 3,
+      "is_default": false,
+      "name": "Normandy"
+    },
+    {
+      "active": true,
+      "id": 4,
+      "is_default": false,
+      "name": "Persian Gulf"
+    },
+    {
+      "active": true,
+      "id": 5,
+      "is_default": false,
+      "name": "Syria"
+    }
+  ]
+}
+
