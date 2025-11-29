@@ -3,5 +3,115 @@
     <h1 class="h2">Mission</h1>
   </div>
 
-  <p>Mission details are now edited on the <strong>Flight</strong> tab.</p>
+  <form id="mission-form">
+
+    <!-- TIME MODE -->
+    <div class="row">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="time-mode">Time Mode</label>
+          <select class="form-control" id="time-mode" name="time-mode">
+            <option value="Z" selected>ZULU</option>
+            <option value="L">LOCAL</option>
+            <option value="H">HACK</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- TIMINGS -->
+    <h5><strong>Timings</strong></h5>
+
+    <div class="row mt-3">
+
+      <div class="col-md-4">
+        <label>Step Time (HH:MM)</label>
+        <input type="text" id="step-time" class="form-control time-24" placeholder="HH:MM">
+      </div>
+
+      <div class="col-md-4">
+        <label>Check-In</label>
+        <input type="text" id="checkin-time" class="form-control time-24" placeholder="HH:MM">
+      </div>
+
+      <div class="col-md-4">
+        <label>Taxi</label>
+        <input type="text" id="taxi-time" class="form-control time-24" placeholder="HH:MM">
+      </div>
+
+    </div>
+
+    <div class="row mt-3">
+
+      <div class="col-md-4">
+        <label>T/O</label>
+        <input type="text" id="takeoff-time" class="form-control time-24" placeholder="HH:MM">
+      </div>
+
+      <div class="col-md-4">
+        <label>Roll Call</label>
+        <input type="text" id="rollcall-time" class="form-control time-24" placeholder="HH:MM">
+      </div>
+
+      <div class="col-md-4">
+        <label>Marshall</label>
+        <input type="text" id="marshall-time" class="form-control time-24" placeholder="HH:MM">
+      </div>
+
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-4">
+        <label>TOT</label>
+        <input type="text" id="tot-time" class="form-control time-24" placeholder="HH:MM">
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- ADMIN -->
+    <h5><strong>Admin</strong></h5>
+
+    <div class="row">
+
+      <div class="col-4">
+        <div class="form-group">
+          <label for="block">Blocks</label>
+          <input type="text" class="form-control" id="block" name="block">
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="form-group">
+          <label for="airspace">Airspace</label>
+          <input type="text" class="form-control" id="airspace" name="airspace">
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="form-group">
+          <label for="vul">VUL</label>
+          <input type="text" class="form-control" id="vul" name="vul">
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="form-group">
+          <label for="bingo">Bingo</label>
+          <input type="number" class="form-control" id="bingo" name="bingo">
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="form-group">
+          <label for="joker">Joker</label>
+          <input type="number" class="form-control" id="joker" name="joker">
+        </div>
+      </div>
+
+    </div>
+
+  </form>
 </div>

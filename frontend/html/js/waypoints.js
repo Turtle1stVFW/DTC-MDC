@@ -996,7 +996,7 @@ $('#flight-airframe').on('data-route-updated', function(e) {
     if (!route.route_only) {
       // Mission Start
       var start_time = parseInt(route.xml.ownerDocument.querySelector('Mission > Environment > Starttime').textContent);
-      $("#waypoints-walk-time").val(get_time_from_seconds(start_time)).change();
+      $("#waypoints-step-time").val(get_time_from_seconds(start_time)).change();
 
       // Default T/O time is 20 minutes hence
       $("#waypoints-to-time").val(get_time_from_seconds(start_time+60*20)).change();

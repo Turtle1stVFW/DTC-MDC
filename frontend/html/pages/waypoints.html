@@ -2,20 +2,19 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
   <h1 class="h2">Waypoints</h1>
 </div>
+<!-- ===== Step Time Note ===== -->
+<small class="form-text text-muted mb-2">
+  <strong>Note:</strong> Add Takeoff Time to enable TOT Calcs. 
+</small>
+<!-- ==================================== -->
 
 <form id="waypoints-form" data-nav-target="#comms" class="needs-validation" novalidate>
 
   <div class="form-row">
     <div class="col">
       <div class="form-group">
-        <label for="callsign">Walk Time</label>
-        <input type="text" class="form-control" name="walk-time" id="waypoints-walk-time" value="18:00" required>
-      </div>
-    </div>
-    <div class="col">
-      <div class="form-group">
         <label for="callsign">T/O time</label>
-        <input type="text" class="form-control" name="to-time" id="waypoints-to-time" value="18:20" required>
+        <input type="text" class="form-control" name="to-time" id="waypoints-to-time" >
         <div class="invalid-feedback">
            T/O before walk time!
         </div>
@@ -38,7 +37,7 @@
       <div class="form-group">
         <label for="callsign">Transition Altitude</label>
         <div class="input-group mb-2 ">
-          <input type="number" name="transition-alt" id="waypoints-transition-alt" class="form-control" value="13000">
+          <input type="number" name="transition-alt" id="waypoints-transition-alt" class="form-control" value="18000">
           <div class="input-group-append">
             <div class="input-group-text align-middle">FT</div>
           </div>
@@ -52,7 +51,7 @@
           <div class="input-group-prepend">
             <div class="input-group-text align-middle">FL</div>
           </div>
-          <input type="number" name="transition-level" id="waypoints-transition-level" class="form-control" value="150">
+          <input type="number" name="transition-level" id="waypoints-transition-level" class="form-control" value="180">
         </div>
       </div>
     </div>
