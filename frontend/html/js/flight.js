@@ -746,7 +746,8 @@ if (ac === "F-16C") {
 function flight_export() {
   var ret = get_form_data($("#flight-form"));
   ret['members'] = [];
-  
+  ret['mission-type'] = $("#mission-type").val();
+
   var headers = [];
   $("#flight-members-table > thead > tr > th").each(function(idx, row) {
     headers.push(row.innerText.toLowerCase());
@@ -765,6 +766,7 @@ function flight_load(data, callback) {
   if (!data) { callback(); return; }
 
   $("#flight-airframe").val(data['flight-airframe']).change();
+  $("#mission-type").val(data['mission-type']);
   $('#flight-coord-' + data['flight-coord']).click();
   $("#flight-coord-decimals").val(data['flight-coord-decimals']).change();
 
